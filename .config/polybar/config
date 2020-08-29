@@ -1,0 +1,656 @@
+
+[global/wm]
+;https://github.com/jaagr/polybar/wiki/Configuration#global-wm-settings
+margin-top = 0
+margin-bottom = 0
+
+[settings]
+;https://github.com/jaagr/polybar/wiki/Configuration#application-settings
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+; Define fallback values used by all module formats
+format-foreground = #c83737
+format-background = #00FF00
+format-underline =
+format-overline =
+format-spacing =
+format-padding =
+format-margin =
+format-offset =
+
+[colors]
+; MagyArch theme ============
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+foreground-alt = ${xrdb:red}
+alert = #fff68f
+volume-min = #a3be8c
+volume-med = #ebcb8b
+volume-max = #bf616a
+text = #99d1ce
+; =======================
+
+
+################################################################################
+################################################################################
+############                  MAINBAR-BSPWM                         ############
+################################################################################
+################################################################################
+
+[bar/mainbar-hlwm]
+monitor = ${env:MONITOR:DisplayPort-0}
+;monitor-fallback = HDMI1
+width = 100%
+height = 23
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
+bottom = false
+;separator = |
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 1
+line-color = #f00
+
+wm-restack = hlwm
+;override-redirect = true
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
+#border-size = 0
+;border-left-size = 0
+i;border-right-size = 0
+;border-top-size = 0
+border-bottom-size = 3
+border-color = ${colors.foreground-alt}
+
+padding-left = 2
+padding-right = 0
+
+module-margin-left = 2
+module-margin-right = 0
+
+;https://github.com/jaagr/polybar/wiki/Fonts
+font-0 = "Iosevka Nerd Font:size=12;0"
+font-1 = "JetBrains Mono:size=10;0"
+font-2 = "FontAwesome:size=11;0"
+font-3 = "Joy Pixels:scale=10;"
+
+modules-left = ewmh xwindow
+modules-center = date
+modules-right = cpu-graph temperature mem weather2 pavolume wifi help power
+
+#tray-position = none
+
+tray-detached = false
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 2
+tray-maxsize = 22
+tray-scale = 1.0
+tray-position = right
+tray-background = ${colors.background}
+
+
+# scroll-up = bspwm-desknext
+#scroll-down = bspwm-deskprev
+
+
+
+
+
+################################################################################
+################################################################################
+############                       MODULE BSPWM                     ############
+################################################################################
+################################################################################
+
+
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+;ws-icon-default = 
+
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-background = ${colors.background}
+label-focused-underline= ${colors.foreground-alt}
+label-focused-padding = 1
+label-focused-foreground = ${colors.foreground-alt}
+
+label-occupied = %icon%
+label-occupied-padding = 1
+label-occupied-background = ${colors.background}
+
+label-urgent = %icon%
+label-urgent-padding = 1
+label-urgent-foreground = #ffffff
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 1
+label-empty-background = ${colors.background}
+label-monocle = "  "
+label-monocle-foreground = ${colors.foreground}
+label-tiled = "  "
+label-tiled-foreground = ${colors.foreground}
+label-fullscreen = "  "
+label-fullscreen-foreground = ${colors.foreground}
+label-floating = "  "
+label-floating-foreground = ${colors.foreground}
+label-pseudotiled = "  "
+label-pseudotiled-foreground = ${colors.foreground}
+label-locked = "  "
+label-locked-foreground = ${colors.foreground}
+label-sticky = "  "
+label-sticky-foreground = ${colors.foreground}
+label-private =  "     "
+label-private-foreground = ${colors.foreground}
+
+; Separator in between workspaces
+;label-separator = |
+;label-separator-padding = 10
+;label-separator-foreground = #ffb52a
+
+#format-foreground = ${colors.foreground}
+#format-background = ${colors.background}
+
+
+################################################################################
+###############################################################################
+############                       MODULES A-Z                      ############
+################################################################################
+################################################################################
+
+
+
+
+[module/cpu-graph]
+type = internal/cpu
+interval = 0.08
+;format = " <ramp-coreload>"
+format = " <ramp-coreload>"
+format-margin = 1
+ramp-coreload-0 = ▁
+ramp-coreload-0-foreground = ${colors.foreground}
+ramp-coreload-1 = ▂
+ramp-coreload-1-foreground = ${colors.foreground}
+ramp-coreload-2 = ▃
+ramp-coreload-2-foreground = #d3ffce
+ramp-coreload-3 = ▄
+ramp-coreload-3-foreground = #5ac18e
+ramp-coreload-4 = ▅
+ramp-coreload-4-foreground = #fff68f
+ramp-coreload-5 = ▆
+ramp-coreload-5-foreground = #fff68f
+ramp-coreload-6 = ▇
+ramp-coreload-6-foreground = #ff4040
+ramp-coreload-7 = █
+ramp-coreload-7-foreground = #ff4040
+ramp-coreload-font = 3
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+;format-underline = ${colors.foreground-alt}
+format-padding = 2
+
+
+[module/weather2]
+type = custom/script
+exec = $HOME/.local/bin/statusbar/weather
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+tail = true
+
+
+[module/mem]
+type = custom/script
+exec = ~/.local/bin/statusbar/memory
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+interval = 1
+format-prefix = "💡 "
+
+
+
+[module/cpu-usage]
+type = custom/script
+exec = ~/.local/bin/cpu
+label = "%output%"
+interval = 10
+format-prefix = "💻 "
+format-underline = #268bd2
+format-background = ${colors.background}
+format-padding = 1
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 75
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = #fd0073
+;label-warn-background = ${colors.background}
+
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+
+
+
+################################################################################
+
+[module/cpu2]
+;https://github.com/jaagr/polybar/wiki/Module:-cpu
+type = internal/cpu
+; Seconds to sleep between updates
+; Default: 1
+interval = 1
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = " 🚨 "
+format-prefix-foreground = #179ae3
+
+label-font = 1
+
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label>
+
+
+; Available tokens:
+;   %percentage% (default) - total cpu load
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label = Cpu %percentage:3%%
+
+################################################################################
+
+
+
+#################################################################
+
+[module/ewmh]
+type = internal/xworkspaces
+
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-5 = 6;
+icon-6 = 7;
+icon-7 = 8;
+icon-8 = 9;
+icon-9 = 10;
+
+format = <label-state>
+label-monitor = %name%
+
+label-active = 
+label-active-foreground = ${colors.foreground-alt}
+label-active-background = ${colors.background}
+;label-active-underline= ${colors.foreground-alt}
+label-active-padding = 2
+
+label-occupied = 
+label-occupied-foreground = #f37575
+label-occupied-background = ${colors.background}
+label-occupied-padding = 2
+
+label-urgent = 
+label-urgent-foreground = ${colors.alert}
+label-urgent-background = ${colors.background}
+label-urgent-underline = ${colors.alert}
+label-urgent-padding = 2
+
+
+label-empty = •
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 2
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 0 
+icon-1 = Web;
+icon-2 = Chat;
+icon-3 = Edit;
+icon-4 = Work;
+icon-5 = Virtual;
+icon-6 = Media;
+icon-7 = Steam;
+icon-8 = Misc;
+icon-9 = Music;
+;icon-9 = 10;?
+;icon-default = ""
+
+format = " <label-state> "
+label-active = "%icon% %name%" 
+label-active-foreground = ${xrdb:red}
+label-active-background = ${xrdb:background}
+;label-active-background = #5a000000
+;label-active-underline = #DF4B03
+;label-active-underline = #E1201B
+label-active-padding = 1
+
+label-occupied = "%icon% %name%"
+label-occupied-padding = 1
+;label-occupied-underline = #FAB148
+;label-occupied-backround = #273039 
+
+label-empty = "%icon%"
+label-empty-padding = 1
+;label-empty-underline = #FAB148
+;label-empty-background = #273039
+
+label-inactive = "%icon%"
+;label-inactive-underline = #74B427
+label-inactive-padding = 1
+
+
+################################################################################
+
+[module/kernel]
+type = custom/script
+exec = uname -r
+tail = false
+interval = 1024
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = " ⛵ "
+format-prefix-foreground = #eeba30
+;format-underline = #eeba30
+
+
+
+
+################################################################################
+
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+label = %percentage%%
+
+
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+label = %percentage_used%%
+
+
+
+[module/uparch]
+type = custom/script
+exec = ~/.local/bin/uparch.sh
+interval = 600
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+click-left = $TERMFLOAT -e bash pacui &
+click-right = xdo close &
+
+################################################################################
+
+
+[module/sep]
+; alternative separator
+type = custom/text
+content = " "
+content-foreground = ${colors.foreground}
+content-background =  ${colors.background}
+
+################################################################################
+
+
+[module/ctemp]
+type = custom/script
+exec = sensors | awk  '/^Tdie:/ {print $2}'
+interval = 2
+format-padding = 2
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+;format-underline = #C1B93E
+format-prefix-foreground = #c3cdc8
+label =   %output%
+
+[module/battery]
+type = custom/script
+exec = acpi -b | awk '{print $3 $4}'
+format-padding = 2
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+label = %output%
+
+
+
+
+################################################################################
+
+[module/uptime]
+;https://github.com/jaagr/polybar/wiki/User-contributed-modules#uptime
+type = custom/script
+exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
+interval = 100
+label = Uptime : %output%
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = " "
+format-prefix-foreground = #C15D3E
+#format-underline = #C15D3E
+format-padding = 2
+
+################################################################################
+
+
+
+[module/alsa]
+type = internal/alsa
+format-volume = <ramp-volume>
+format-muted =  0%
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-foreground = ${colors.foreground}
+ramp-volume-background = ${colors.background}
+format-muted-foreground = ${colors.foreground}
+format-muted-background = ${colors.background}
+format-padding = 2
+
+click-left = pavucontrol &
+
+################################################################################
+
+
+################################################################################
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+
+#########################################################################
+#       Clickable modules            #
+######################################################################
+
+[module/firefox]
+type = custom/text
+content = 
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+content-padding = 2
+
+click-left = firefox &
+
+
+[module/term]
+type = custom/text
+content = 
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+content-padding = 3
+
+click-left  = urxvt &
+
+
+[module/app]
+type = custom/text
+content = ""
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+content-padding = 2
+click-left = rofi -modi run,drun -show drun -location 1 -xoffset 1450 -yoffset 23 -line-padding 4 -columns 1 -width 15 -lines 20 -padding 15 -hide-scrollbar -show-icons -drun-icon-theme
+click-right = jgmenu_run >/dev/null 2>&1 &
+
+
+[module/wifi]
+type = custom/text
+content = 
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+content-padding = 2
+click-left = bspwmfloat && $TERMFLOAT -e nmtui
+click-right = xdo close &
+
+[module/lxappearance]
+type = custom/text
+content = ""
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+content-padding = 2
+
+click-left  = lxappearance &
+
+
+[module/files]
+type = custom/text
+content = ""
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+content-padding = 2
+
+click-left  = pcmanfm &
+
+
+[module/power]
+type = custom/text
+content = 
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+content-padding = 2
+
+click-left = power
+
+
+[module/help]
+type = custom/text
+content = 
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+content-padding = 2
+
+click-left = zathura $HOME/.local/share/Magyarch-bspwm.pdf &
+
+
+
+[module/pavolume]
+type = custom/script
+tail = true
+label = %output%
+exec = $HOME/.local/bin/statusbar/volume &
+click-left = exec pavucontrol
+format-foreground = ${colors.foreground}
+format-prefix-foreground = #8d0000
+format-background = ${colors.background}
+format-padding = 2
+interval = 1
+
+
+[module/date]
+;https://github.com/jaagr/polybar/wiki/Module:-date
+type = custom/script
+exec = ~/.local/bin/statusbar/clock
+click-left = $TERMFLOAT -g 70x20-620+30 -e calcurse
+click-right = killall -9 calcurse &
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 2
+format-prefix = " 📅  "
+interval=30
+
+
+
+
+
+###############################################################################
+# vim:ft=dosini
