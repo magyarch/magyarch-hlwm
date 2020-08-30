@@ -13,6 +13,10 @@
 	/home/xeoncpu/bin/
 	..
 1598614274
+'d
+	/home/xeoncpu/Letöltések/magyarch-hlwm
+	..
+1598707644
 'h
 	/home/xeoncpu/
 	..
@@ -25,7 +29,7 @@
 # Bookmarks:
 
 # TUI:
-ar
+al
 q0
 v2
 ov
@@ -113,91 +117,94 @@ d/home/xeoncpu/baz-hlwm/etc/skel/.config
 	sxhkd
 10
 d/home/xeoncpu
-	Zenék
-8
-
-# Right window history (oldest to newest):
-D/home/xeoncpu
 	.local
 3
-D/home/xeoncpu/.local
+d/home/xeoncpu/.local
 	bin
 1
-D/home/xeoncpu/.local/bin
-	autostart
-1
-D/home/xeoncpu/.local
-	bin
-1
-D/home/xeoncpu
+d/home/xeoncpu
 	.config
 2
-D/home/xeoncpu/.config
-	herbstluftwm
-4
-D/home/xeoncpu/.config/herbstluftwm
-	autostart
+d/home/xeoncpu/.config
+	sxhkd
+16
+d/home/xeoncpu/.config/sxhkd
+	sxhkdrc
 1
-D/home/xeoncpu/.config
-	herbstluftwm
-4
-D/home/xeoncpu
-	.local
-3
-D/home/xeoncpu/.local
-	bin
+d/home/xeoncpu/.config
+	sxhkd
+16
+d/home/xeoncpu
+	Letöltések
+8
+d/home/xeoncpu/Letöltések
+	baz-bspwm
 1
-D/home/xeoncpu/.local/bin
+d/home/xeoncpu/Letöltések/baz-bspwm
+	.config
+1
+d/home/xeoncpu/Letöltések/baz-bspwm/.config
+	neofetch
+9
+d/home/xeoncpu/Letöltések/baz-bspwm
+	.config
+1
+d/home/xeoncpu/Letöltések/baz-bspwm/.config
+	neofetch
+9
+d/home/xeoncpu
+	.config
+2
+d/home/xeoncpu/.config
+	sxhkd
+18
+d/home/xeoncpu/.config/sxhkd
+	sxhkdrc
+1
+d/home/xeoncpu
+	.config
+2
+d/home/xeoncpu/.config
+	sxhkd
+18
+d/home/xeoncpu/.config/sxhkd
+	sxhkdrc
+1
+d/home/xeoncpu
+	Videók
+7
+d/home/xeoncpu/Videók
 	..
 0
-D/home/xeoncpu/.local
-	bin
-1
-D/home/xeoncpu
-	.config
-2
-D/home/xeoncpu/.config
-	herbstluftwm
-4
-D/home/xeoncpu/.config/herbstluftwm
-	autostart
-1
-D/home/xeoncpu
-	Letöltések
-4
-D/home/xeoncpu/Letöltések
-	wallpaper.jpg
-1
-D/home/xeoncpu
-	Letöltések
-4
-D/home
+d/home/xeoncpu
+	Videók
+7
+d/home/xeoncpu/Videók
+	..
+0
+d/home/xeoncpu
+	Videók
+7
+d/home
 	xeoncpu
 1
-D/home/xeoncpu
-	.config
-2
-D/home/xeoncpu/.config
-	wallpaper.jpg
-16
-D/home/xeoncpu
-	.config
-2
-D/home/xeoncpu/.config
-	polybar
-6
-D/home/xeoncpu/.config/polybar
-	config
+d/home/xeoncpu
+	.local
 3
-D/home/xeoncpu/.config
-	polybar
-6
-D/home/xeoncpu
-	.config
-2
-D/home/xeoncpu/.config
-	herbstluftwm
-4
+d/home/xeoncpu/.local
+	bin
+1
+d/home/xeoncpu/.local/bin
+	cmds
+1
+d/home/xeoncpu/.local/bin/cmds
+	dmenurecord
+5
+d/home/xeoncpu
+	..
+0
+
+# Right window history (oldest to newest):
 D/home/xeoncpu/.config/herbstluftwm
 	autostart
 1
@@ -394,8 +401,89 @@ D/home/xeoncpu/.config
 	vifm
 17
 D/home/xeoncpu
+	Letöltések
+8
+D/home/xeoncpu/Letöltések
+	baz-bspwm
+1
+D/home/xeoncpu/Letöltések/baz-bspwm
+	setup-git.sh
+14
+D/home/xeoncpu/Letöltések
+	magyarch-hlwm
+2
+D/home/xeoncpu/Letöltések/magyarch-hlwm
+	git.sh
+3
+D/home/xeoncpu/Letöltések
+	magyarch-hlwm
+2
+D/home/xeoncpu/Letöltések/magyarch-hlwm
+	.local
+2
+D/home/xeoncpu/Letöltések/magyarch-hlwm/.local
+	bin
+1
+D/home/xeoncpu/Letöltések/magyarch-hlwm
+	.config
+1
+D/home/xeoncpu/Letöltések/magyarch-hlwm/.config
+	mpd
+5
+D/home/xeoncpu/Letöltések/magyarch-hlwm
+	.ncmpcpp
+4
+D/home/xeoncpu/Letöltések
+	magyarch-hlwm
+2
+D/home/xeoncpu
+	.config
+2
+D/home/xeoncpu/.config
+	vifm
+19
+D/home/xeoncpu/.config/vifm
 	..
 0
+D/home/xeoncpu/.config
+	polybar
+13
+D/home/xeoncpu
+	.local
+3
+D/home/xeoncpu/.local
+	share
+2
+D/home/xeoncpu/.local/share
+	recently-used.xbel
+4
+D/home/xeoncpu/.local
+	share
+2
+D/home/xeoncpu
+	.local
+3
+D/home
+	xeoncpu
+1
+D/
+	home
+4
+D/home
+	xeoncpu
+1
+D/home/xeoncpu
+	Letöltések
+10
+D/home/xeoncpu/Letöltések
+	magyarch-hlwm
+2
+D/home/xeoncpu/Letöltések/magyarch-hlwm
+	.ncmpcpp
+4
+D/home/xeoncpu
+	Letöltések
+4
 
 # Command line history (oldest to newest):
 :mkdir Videos 
@@ -424,6 +512,8 @@ D/home/xeoncpu
 :mkdir alacritty
 :mkdir herbstluftwm
 :mkdir rofi
+:mkdir .local
+:mkdir .config
 
 # Search history (oldest to newest):
 
@@ -449,10 +539,7 @@ pwallpaper.jpg
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/xeoncpu/Letöltések/baz-bspwm/.config/gtk-2.0
-""/home/xeoncpu/Letöltések/baz-bspwm/.config/gtk-3.0
-""/home/xeoncpu/Letöltések/baz-bspwm/.config/nvim
-""/home/xeoncpu/Letöltések/baz-bspwm/.config/vifm
+""/home/xeoncpu/.local/share/vifm/Trash/000_screencast-200829-1816-51.mkv
 
 # Directory stack (oldest to newest):
 
@@ -1781,3 +1868,5 @@ t/home/xeoncpu/.local/share/vifm/Trash/000_dmenufm
 	/home/xeoncpu/baz-bspwm/.local/bin/dmenufm
 t/home/xeoncpu/.local/share/vifm/Trash/000_dmenufm-open
 	/home/xeoncpu/baz-bspwm/.local/bin/dmenufm-open
+t/home/xeoncpu/.local/share/vifm/Trash/000_screencast-200829-1816-51.mkv
+	/home/xeoncpu/Videók/screencast-200829-1816-51.mkv

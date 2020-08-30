@@ -14,8 +14,8 @@ hc() {
     herbstclient "$@"
 }
 
-#herbstclient set_layout horizontal
-herbstclient set_layout grid
+herbstclient set_layout horizontal
+#herbstclient set_layout grid
 
 hc emit_hook reload
 
@@ -43,10 +43,10 @@ Mod=Mod4   # Use the super key as the main modifier
 # MOVEMENTS
 
 # focusing clients
-hc keybind $Mod-Left  focus left
-hc keybind $Mod-Down  focus down
-hc keybind $Mod-Up    focus up
-hc keybind $Mod-Right focus right
+#hc keybind $Mod-Left  focus left
+#hc keybind $Mod-Down  focus down
+#hc keybind $Mod-Up    focus up
+#hc keybind $Mod-Right focus right
 hc keybind $Mod-h     focus left
 hc keybind $Mod-j     focus down
 hc keybind $Mod-k     focus up
@@ -75,12 +75,12 @@ hc keybind $Mod-Shift-l     shift right
 # FRAMES
 
 # create an empty frame at the specified direction
-hc keybind $Mod-u       split   bottom  0.5
-hc keybind $Mod-o       split   right   0.5
+#hc keybind $Mod-u       split   bottom  0.5
+#hc keybind $Mod-o       split   right   0.5
 # let the current frame explode into subframes
-hc keybind $Mod-Control-space split explode
+#hc keybind $Mod-Control-space split explode
 # remove frame
-hc keybind $Mod-r remove
+hc keybind $Mod-Control-m remove
 
 # resizing frames
 resizestep=0.05
@@ -112,9 +112,9 @@ for i in ${!tag_names[@]} ; do
 done
 
 # layouting
-hc keybind $Mod-s floating toggle
-hc keybind $Mod-f fullscreen toggle
-hc keybind $Mod-p pseudotile toggle
+#hc keybind $Mod-s floating toggle
+#hc keybind $Mod-f fullscreen toggle
+#hc keybind $Mod-p pseudotile toggle
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
@@ -130,17 +130,17 @@ hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
 
 # focus on ...
-hc keybind $Mod-BackSpace   cycle_monitor
-hc keybind $Mod-Tab         use_index +1 --skip-visible
-hc keybind $Mod-Shift-Tab   use_index -1 --skip-visible
-hc keybind Control-Mod1-Left    focus left
-hc keybind Control-Mod1-Up      focus up
-hc keybind Control-Mod1-Right   focus right
-hc keybind Control-Mod1-Down    focus down
-hc keybind Mod1-Tab         use_index +1 --skip-visible
-hc keybind Mod1-Shift-Tab   use_index -1 --skip-visible
+#hc keybind $Mod-BackSpace   cycle_monitor
+#hc keybind $Mod-Tab         use_index +1 --skip-visible
+#hc keybind $Mod-Shift-Tab   use_index -1 --skip-visible
+#hc keybind Control-Mod1-Left    focus left
+#hc keybind Control-Mod1-Up      focus up
+#hc keybind Control-Mod1-Right   focus right
+#hc keybind Control-Mod1-Down    focus down
+#hc keybind Mod1-Tab         use_index +1 --skip-visible
+#hc keybind Mod1-Shift-Tab   use_index -1 --skip-visible
 #hc keybind $Mod-c cycle
-hc keybind $Mod-i jumpto urgent
+# hc keybind $Mod1-i jumpto urigent
 
 #reset prior to setting the theme
 #hc attr theme.reset 1
@@ -178,8 +178,8 @@ hc set frame_padding 0
 hc set mouse_recenter_gap 0
 hc set smart_frame_surroundings 1
 hc set smart_window_surroundings 0
-#hc set tree_style '╾│ ├└╼─┐'
-hc set set tree_style '?| ++?-+'
+hc set tree_style '╾│ ├└╼─┐'
+#hc set set tree_style '?| ++?-+'
 #hc set tree_style '⊙│ ├╰»─╮'
 hc set window_gap 15
 
