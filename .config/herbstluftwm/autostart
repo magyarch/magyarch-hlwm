@@ -139,7 +139,7 @@ hc mousebind $Mod-Button3 resize
 # Attribute
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc attr theme.active.color '#c63737'
+hc attr theme.active.color '#2e8b57'
 hc attr theme.active.inner_color '#141414'
 hc attr theme.active.outer_color '#6790EB'
 hc attr theme.background_color '#141414'

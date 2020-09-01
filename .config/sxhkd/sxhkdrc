@@ -143,6 +143,11 @@ super + shift + r
 super + {_,shift + } f
     herbstclient {fullscreen toggle, floating toggle}
 
+
+###################################################################################
+                      # Some extra function #
+##################################################################################                      
+
 # Increase decrease gaps
 super + a 
      herbstclient set window_gap $(( $(herbstclient attr settings.window_gap) + 2 ))   
@@ -150,4 +155,9 @@ super + a
 super + shift + a 
      herbstclient set window_gap $(( $(herbstclient attr settings.window_gap) - 2 ))    
 
+# Hide unhide windows
+super + m
+    herbstclient spawn hide_windows +1
 
+super + shift + m 
+    herbstclient spawn hide_windows -1   
