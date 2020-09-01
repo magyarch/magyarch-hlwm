@@ -16,5 +16,5 @@ cfu="$EDITOR ~/.config/newsboat/urls" \
 cfp="$EDITOR ~/.config/polybar/config" \
 cfmb="$EDITOR ~/.config/ncmpcpp/bindings" \
 cfmc="$EDITOR ~/.config/ncmpcpp/config" \
-cfb="$EDITOR ~/.config/bspwm/bspwmrc" \
+cfb="$EDITOR ~/.config/herbstluftwm/autostart" \
 cfk="$EDITOR ~/.config/sxhkd/sxhkdrc"

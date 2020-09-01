@@ -90,8 +90,8 @@ font-2 = "FontAwesome:size=11;0"
 font-3 = "Joy Pixels:scale=10;"
 
 modules-left = ewmh xwindow
-modules-center = date
-modules-right = cpu-graph temperature mem weather2 pavolume wifi help power
+modules-center = cpu-graph
+modules-right = temperature mem weather2 date pavolume power
 
 #tray-position = none
 
@@ -362,7 +362,7 @@ type = internal/xworkspaces
 pin-workspaces = false
 enable-click = true
 enable-scroll = true
-format-padding = 0 
+format-padding = 0
 icon-1 = Web;
 icon-2 = Chat;
 icon-3 = Edit;
@@ -376,7 +376,7 @@ icon-9 = Music;
 ;icon-default = ""
 
 format = " <label-state> "
-label-active = "%icon% %name%" 
+label-active = "%icon% %name%"
 label-active-foreground = ${xrdb:red}
 label-active-background = ${xrdb:background}
 ;label-active-background = #5a000000
@@ -387,7 +387,7 @@ label-active-padding = 1
 label-occupied = "%icon% %name%"
 label-occupied-padding = 1
 ;label-occupied-underline = #FAB148
-;label-occupied-backround = #273039 
+;label-occupied-backround = #273039
 
 label-empty = "%icon%"
 label-empty-padding = 1
@@ -648,6 +648,25 @@ format-padding = 2
 format-prefix = " 📅  "
 interval=30
 
+
+[module/xkeyboard]
+;https://github.com/jaagr/polybar/wiki/Module:-xkeyboard
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-background = ${colors.background}
+;format-prefix-underline = #3ecfb2
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+label-layout = %layout%
+;label-layout-underline = #3ecfb2
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.background}
+label-indicator-underline = ${colors.foreground}
 
 
 
