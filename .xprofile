@@ -11,7 +11,7 @@ unclutter &		# Remove mouse when idle
 #xcompmgr &		# xcompmgr for transparency
 dunst &			# dunst for notifications
 mpdupdate &
-xwallpaper --no-randr --stretch $HOME/.config/wallpaper.jpg &
+#xwallpaper --no-randr --stretch $HOME/.config/wallpaper.jpg &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #~/.config/polybar/launch.sh &
 #picom --config ~/.config/picom.conf
