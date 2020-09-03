@@ -71,7 +71,7 @@ Mod=Mod4   # Use the super key as the main modifier
 # let the current frame explode into subframes
 #hc keybind $Mod-Control-space split explode
 # remove frame
-hc keybind $Mod-Control-m remove
+#hc keybind $Mod-Control-m remove
 
 # resizing frames
 resizestep=0.05
@@ -209,7 +209,7 @@ hc rule class~'(gimp|Gimp)' tag='Misc' switchtag=on focus=on
 
 # give focus to most common terminals
 #hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
-hhc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=off
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=off
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule class=VirtualBox fullscreen=on
