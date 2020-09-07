@@ -197,15 +197,15 @@ hc rule focus=on # normally focus new clients
 #hc rule focus=off # normally do not focus new clients
 
 #assign applications to workspaces or tags
-hc rule class~'(brave|Brave-browser|Chromium|Google-chrome)' tag='Web' switchtag=on focus=on
-hc rule class='Spotify' tag='Music' switchtag=on focus=on
-hc rule class='Subl3' tag='Edit'  switchtag=on focus=on
-hc rule class~'(discord|Discord)' tag='Chat' switchtag=on focus=on
-hc rule class~'(vlc|mpv|Mpv)' tag='Media' switchtag=on focus=on
-hc rule class~'(VirtualBox Manager|Vmplayer)' tag='Virtual' switchtag=on focus=on
-hc rule class~'(Thunar|Pcmanfm|Nemo)' tag='Work' switchtag=on focus=on
-hc rule class~'(Shotcut|Gpick|gpick)' floating=on
-hc rule class~'(gimp|Gimp)' tag='Misc' switchtag=on focus=on
+hc rule class~'(brave|Brave-browser|Chromium|Google-chrome)' tag='' switchtag=on focus=on
+hc rule class='Spotify' tag='' switchtag=on focus=on
+hc rule class='Subl3' tag=''  switchtag=on focus=on
+hc rule class~'(discord|Discord)' tag='' switchtag=on focus=on
+hc rule class~'(vlc|mpv|Mpv)' tag='' switchtag=on focus=on
+hc rule class~'(VirtualBox Manager|Vmplayer)' tag='' switchtag=on focus=on
+hc rule class~'(Thunar|Pcmanfm|Nemo)' tag='' switchtag=on focus=on
+hc rule class~'(Shotcut|Gpick|gpick|Steam)' tag='' floating=on
+hc rule class~'(gimp|Gimp)' tag='' switchtag=on focus=on
 
 # give focus to most common terminals
 #hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
