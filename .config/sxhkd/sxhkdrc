@@ -25,7 +25,7 @@ super + {_,shift + } e
 
 # News, tui music player
 super + {_,shift + } n
-    {$TERMINAL -e newsboat, $TERMFLOAT -g 110x30 -e ncmpcpp}
+    {$TERMINAL -e newsboat, $TERMINAL -e ncmpcpp}
 
 # Htop,gtop system monitor
 super + {_,shift + } i
@@ -63,8 +63,8 @@ super + {_,shift + } KP_Home
 ############################################################
 
 # Help doc
-#super + F1
- #   zathura ~/.local/bin/Magyarch-hlwm.pdf
+super + F1
+    zathura ~/.local/bin/Magyarch-hlwm-help.pdf
 
 # Edit important config files
 super + F2
