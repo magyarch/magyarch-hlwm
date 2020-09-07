@@ -86,7 +86,7 @@ module-margin-right = 0
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Iosevka Nerd Font:size=12;0"
 font-1 = "JetBrains Mono:size=10;0"
-font-2 = "FontAwesome:size=11;0"
+font-2 = "FontAwesome:size=12;0"
 font-3 = "Joy Pixels:scale=10;"
 
 modules-left = ewmh xwindow
@@ -103,83 +103,6 @@ tray-maxsize = 22
 tray-scale = 1.0
 tray-position = right
 tray-background = ${colors.background}
-
-
-# scroll-up = bspwm-desknext
-#scroll-down = bspwm-deskprev
-
-
-
-
-
-################################################################################
-################################################################################
-############                       MODULE BSPWM                     ############
-################################################################################
-################################################################################
-
-
-
-[module/bspwm]
-type = internal/bspwm
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-;ws-icon-default = 
-
-
-format = <label-state> <label-mode>
-
-label-focused = %icon%
-label-focused-background = ${colors.background}
-label-focused-underline= ${colors.foreground-alt}
-label-focused-padding = 1
-label-focused-foreground = ${colors.foreground-alt}
-
-label-occupied = %icon%
-label-occupied-padding = 1
-label-occupied-background = ${colors.background}
-
-label-urgent = %icon%
-label-urgent-padding = 1
-label-urgent-foreground = #ffffff
-
-label-empty = %icon%
-label-empty-foreground = ${colors.foreground}
-label-empty-padding = 1
-label-empty-background = ${colors.background}
-label-monocle = "  "
-label-monocle-foreground = ${colors.foreground}
-label-tiled = "  "
-label-tiled-foreground = ${colors.foreground}
-label-fullscreen = "  "
-label-fullscreen-foreground = ${colors.foreground}
-label-floating = "  "
-label-floating-foreground = ${colors.foreground}
-label-pseudotiled = "  "
-label-pseudotiled-foreground = ${colors.foreground}
-label-locked = "  "
-label-locked-foreground = ${colors.foreground}
-label-sticky = "  "
-label-sticky-foreground = ${colors.foreground}
-label-private =  "     "
-label-private-foreground = ${colors.foreground}
-
-; Separator in between workspaces
-;label-separator = |
-;label-separator-padding = 10
-;label-separator-foreground = #ffb52a
-
-#format-foreground = ${colors.foreground}
-#format-background = ${colors.background}
 
 
 ################################################################################
@@ -318,8 +241,8 @@ enable-scroll = true
 reverse-scroll = true
 
 
-icon-0 = 1;
-icon-1 = 2;
+icon-0 = 1;
+icon-1 = 2;
 icon-2 = 3;
 icon-3 = 4;
 icon-4 = 5;
@@ -332,25 +255,25 @@ icon-9 = 10;
 format = <label-state>
 label-monitor = %name%
 
-label-active = 
+label-active = %name%
 label-active-foreground = ${colors.foreground-alt}
 label-active-background = ${colors.background}
 ;label-active-underline= ${colors.foreground-alt}
 label-active-padding = 2
 
-label-occupied = 
+label-occupied = %name%
 label-occupied-foreground = #f37575
 label-occupied-background = ${colors.background}
 label-occupied-padding = 2
 
-label-urgent = 
+label-urgent = %name%
 label-urgent-foreground = ${colors.alert}
 label-urgent-background = ${colors.background}
 label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
 
 
-label-empty = •
+label-empty = %name%
 label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 format-foreground = ${colors.foreground}
@@ -365,7 +288,7 @@ enable-scroll = true
 format-padding = 0
 icon-1 = Web;
 icon-2 = Chat;
-icon-3 = Edit;
+icon-3 = Edit;
 icon-4 = Work;
 icon-5 = Virtual;
 icon-6 = Media;
@@ -631,7 +554,7 @@ content-foreground = ${colors.foreground}
 content-background = ${colors.background}
 content-padding = 2
 
-click-left = zathura $HOME/.local/share/Magyarch-bspwm.pdf &
+click-left = zathura $HOME/.local/bin/Magyarch-hlwm-help.pdf &
 
 
 
