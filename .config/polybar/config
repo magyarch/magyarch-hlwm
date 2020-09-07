@@ -513,7 +513,7 @@ content = 
 content-foreground = ${colors.foreground}
 content-background = ${colors.background}
 content-padding = 2
-click-left = bspwmfloat && $TERMFLOAT -e nmtui
+click-left = $TERMFLOAT -g 110x30+530+300 -e nmtui
 click-right = xdo close &
 
 [module/lxappearance]
@@ -576,7 +576,7 @@ interval = 1
 ;https://github.com/jaagr/polybar/wiki/Module:-date
 type = custom/script
 exec = ~/.local/bin/statusbar/clock
-click-left = $TERMFLOAT -g 70x20-620+30 -e calcurse
+click-left = $TERMFLOAT -g 70x20-16+30 -e calcurse
 click-right = killall -9 calcurse &
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}

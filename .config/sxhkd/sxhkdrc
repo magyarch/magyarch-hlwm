@@ -4,7 +4,7 @@
 
 # Main and float terminal
 super + {_,shift + } Return
-    {$TERMINAL, $TERMFLOAT -g 110x30}
+    {$TERMINAL, $TERMFLOAT -g 110x30+530+300}
 
 # Dmenu2 and rofi(window switcher, application launcher)
 super + {_,shift +} d
@@ -25,7 +25,7 @@ super + {_,shift + } e
 
 # News, tui music player
 super + {_,shift + } n
-    {$TERMINAL -e newsboat, $TERMINAL -e ncmpcpp}
+    {$TERMINAL -e newsboat, $TERMFLOAT -g 110x30+530+300 -e ncmpcpp}
 
 # Htop,gtop system monitor
 super + {_,shift + } i
@@ -33,7 +33,7 @@ super + {_,shift + } i
 
 # S,R,lock script,calendar app
 super + {_,shift + } c
-    {power, $TERMFLOAT -g 70x20-16+30 -e calcurse}
+    {power, $TERMFLOAT -g 110x30+530+300 -e calcurse}
 
 # Default web browser brave and firefox
 super + {_,shift + } w

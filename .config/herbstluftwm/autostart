@@ -179,15 +179,15 @@ hc set_layout horizontal
 hc set window_gap 15
 
 
-hc load Media '
-(split horizontal:0.450000:1
- (clients vertical:0 0x2400001)
- (split vertical:0.300000:1
- (split horizontal:0.500000:0
- (clients vertical:0 0x1c01116)
- (clients vertical:0 0x1c013bd))
- (clients vertical:0 0x1c010da)))
-'
+#hc load Media '
+#(split horizontal:0.450000:1
+# (clients vertical:0 0x2400001)
+# (split vertical:0.300000:1
+# (split horizontal:0.500000:0
+# (clients vertical:0 0x1c01116)
+# (clients vertical:0 0x1c013bd))
+# (clients vertical:0 0x1c010da)))
+#'
 
 
 
@@ -208,11 +208,11 @@ hc rule class~'(Shotcut|Gpick|gpick|Steam)' tag='' floating=on
 hc rule class~'(gimp|Gimp)' tag='' switchtag=on focus=on
 
 # give focus to most common terminals
-#hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
+hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' floating=on focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=off
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-hc rule class=VirtualBox fullscreen=on
+hc rule class=Virtualbox fullscreen=on
 
 # unlock, just to be sure
 hc unlock
