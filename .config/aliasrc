@@ -51,9 +51,6 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"
 #free
 alias free="free -mt"
 
-#use all cores
-alias uac="sh ~/.bin/main/000*"
-
 #continue download
 alias wget="wget -c"
 
@@ -69,8 +66,8 @@ alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 
 # yay as aur helper - updates everything
-alias pksyua="yay -Syu --noconfirm"
-alias upall="yay -Syu --noconfirm"
+alias pksyua="paru -Syu --noconfirm"
+alias upall="paru -Syu --noconfirm"
 
 #ps
 alias psa="ps auxf"
@@ -103,7 +100,7 @@ alias kc='killall conky'
 alias hw="hwinfo --short"
 
 #skip integrity check
-alias yayskip='yay -S --mflags --skipinteg'
+alias paruskip='paru -S --mflags --skipinteg'
 #alias trizenskip='trizen -S --skipinteg'
 
 #check vulnerabilities microcode
@@ -137,12 +134,6 @@ alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
-
-#devour swallow window
-alias mpv="devour mpv"
-alias sxiv="devour sxiv"
-alias zathura="devour zathura"
-
 
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
