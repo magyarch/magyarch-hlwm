@@ -145,9 +145,9 @@ hc attr theme.active.outer_color '#6790EB'
 hc attr theme.background_color '#141414'
 #hc attr theme.border_width 3
 hc attr theme.normal.border_width 0
-hc attr theme.active.border_width 3
-hc attr theme.floating.border_width 1
-hc attr theme.floating.outer_width 1
+hc attr theme.active.border_width 2
+hc attr theme.floating.border_width 2
+hc attr theme.floating.outer_width 0
 hc attr theme.floating.outer_color black
 hc attr theme.inner_color black
 hc attr theme.inner_width 0
@@ -163,20 +163,21 @@ hc set frame_border_active_color '#2e8b57'
 hc set frame_border_normal_color '#2f2b26'
 hc set frame_bg_normal_color '#2f2b26'
 hc set frame_bg_active_color '#0A3639'
-#hc set frame_bg_active_color 'transparent'
-hc set frame_border_width 3
+
+hc set frame_border_width 0
+hc set window_border_inner_width 0
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_gap 0
 hc set frame_padding 0
 hc set mouse_recenter_gap 0
-hc set smart_frame_surroundings 1
-hc set smart_window_surroundings 1
+hc set smart_frame_surroundings 0
+hc set smart_window_surroundings 0
 #hc set tree_style '╾│ ├└╼─┐'
 hc set_layout horizontal
 #herbstclient set_layout grid
 
-hc set window_gap 15
+hc set window_gap 5
 
 
 #hc load Media '
@@ -206,13 +207,14 @@ hc rule class~'(VirtualBox Manager|Vmplayer)' tag='' switchtag=on focus=on
 hc rule class~'(Thunar|Pcmanfm|Nemo)' tag='' switchtag=on focus=on
 hc rule class~'(Shotcut|Gpick|gpick|Steam)' tag='' floating=on
 hc rule class~'(gimp|Gimp)' tag='' switchtag=on focus=on
+hc rule class~'(Zathura|Lxappearance|Pavucontrol)' floatplacement=center focus=on
+
 
 # give focus to most common terminals
 hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' floating=on focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=off
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-hc rule class=Virtualbox fullscreen=on
 
 # unlock, just to be sure
 hc unlock
@@ -235,7 +237,7 @@ hc set set tree_style '?| ++?-+'
 
 #room for polybar on both monitors
 # find the panel
-panel=~/.config/polybar/launch.sh
+panel=$HOME/.config/polybar/launch.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 start it on each monitor
 "$panel" $monitor &

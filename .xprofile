@@ -13,6 +13,4 @@ dunst &			# dunst for notifications
 mpdupdate &
 #xwallpaper --no-randr --stretch $HOME/.config/wallpaper.jpg &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-#~/.config/polybar/launch.sh &
-#picom --config ~/.config/picom.conf
-picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 &
+picom --experimental-backends --opacity-rule "80:class_g = 'URxvt'" -cCGfF -o 0.70 -O 0.028 -I 0.028 -t 0 -l 0 -r 7 -D2 -m 1.00  &

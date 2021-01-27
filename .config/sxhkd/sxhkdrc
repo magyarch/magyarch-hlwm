@@ -1,5 +1,5 @@
 ####################################################################
-              # Basic herbstluftwm binds #
+              # Basic herbstluftwm keybinds #
 ####################################################################
 
 # Main and float terminal
@@ -10,7 +10,6 @@ super + {_,shift + } Return
 super + {_,shift +} d
     {dmenu_run -i -p 'Search' -nb '#2f2b26' -sb '#2e8b57' -fn 'JetBrains Mono Medium-12' -w '760' -h '24' -x '574' -y '48',rofi_run -r}
 
-
 # Tui filemanager and same command with sudo
 super + r
     $TERMINAL -e $FILE
@@ -18,10 +17,6 @@ super + r
 # Show keys with rofi/default gui editor
 super + {_,shift + } e
     {show_keys.sh, subl3}
-
-# Switch tile and monocle layoutand simple flip layout
-#super + {_,shift + } m
- #   {bspc desktop -l next, bspc node @/ -R 90}
 
 # News, tui music player
 super + {_,shift + } n
@@ -93,6 +88,8 @@ super + F11
 super + F12
     mpv --geometry=40%+30+30 --title="mpvfloat"
 
+F1
+    tdrop -ma 50% -h 50% -y 25% -x 25% alacritty --class=scratchpad -title=scratchpad
 
 
 
