@@ -140,20 +140,20 @@ hc mousebind $Mod-Button3 resize
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 hc attr theme.active.color '#2e8b57'
-hc attr theme.active.inner_color '#141414'
-hc attr theme.active.outer_color '#6790EB'
-hc attr theme.background_color '#141414'
-#hc attr theme.border_width 3
-hc attr theme.normal.border_width 0
+#hc attr theme.active.inner_color '#141414'
+#hc attr theme.active.outer_color '#6790EB'
+#hc attr theme.background_color '#141414'
+#hc attr theme.border_width 1
+#hc attr theme.normal.border_width 0
 hc attr theme.active.border_width 2
 hc attr theme.floating.border_width 2
 hc attr theme.floating.outer_width 0
-hc attr theme.floating.outer_color black
-hc attr theme.inner_color black
-hc attr theme.inner_width 0
-hc attr theme.outer_witdh 0
-hc attr theme.normal.color '#141414'
-hc attr theme.urgent.color orange
+#hc attr theme.floating.outer_color black
+#hc attr theme.inner_color black
+#hc attr theme.inner_width 0
+#hc attr theme.outer_witdh 0
+#hc attr theme.normal.color '#141414'
+#hc attr theme.urgent.color orange
 
 # Set
 
@@ -161,35 +161,24 @@ hc set always_show_frame 0
 hc set focus_follows_mouse 1
 hc set frame_border_active_color '#2e8b57'
 hc set frame_border_normal_color '#2f2b26'
-hc set frame_bg_normal_color '#2f2b26'
-hc set frame_bg_active_color '#0A3639'
+#hc set frame_bg_normal_color '#2f2b26'
+#hc set frame_bg_active_color '#0A3639'
 
-hc set frame_border_width 0
+hc set frame_border_width 2
 hc set window_border_inner_width 0
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_gap 0
 hc set frame_padding 0
 hc set mouse_recenter_gap 0
-hc set smart_frame_surroundings 0
-hc set smart_window_surroundings 0
-#hc set tree_style '╾│ ├└╼─┐'
+hc set smart_frame_surroundings 1
+hc set smart_window_surroundings 1
+herbstclient set tree_style '╾│ ├╰╼─╮'
 hc set_layout horizontal
 #herbstclient set_layout grid
 
+
 hc set window_gap 5
-
-
-#hc load Media '
-#(split horizontal:0.450000:1
-# (clients vertical:0 0x2400001)
-# (split vertical:0.300000:1
-# (split horizontal:0.500000:0
-# (clients vertical:0 0x1c01116)
-# (clients vertical:0 0x1c013bd))
-# (clients vertical:0 0x1c010da)))
-#'
-
 
 
 # RULES
@@ -207,7 +196,7 @@ hc rule class~'(VirtualBox Manager|Vmplayer)' tag='' switchtag=on focus=on
 hc rule class~'(Thunar|Pcmanfm|Nemo)' tag='' switchtag=on focus=on
 hc rule class~'(Shotcut|Gpick|gpick|Steam)' tag='' floating=on
 hc rule class~'(gimp|Gimp)' tag='' switchtag=on focus=on
-hc rule class~'(Zathura|Lxappearance|Pavucontrol)' floatplacement=center focus=on
+hc rule class~'(Zathura|zathura|Lxappearance|Pavucontrol|)' floating=on floatplacement=center
 
 
 # give focus to most common terminals
@@ -218,15 +207,6 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 
 # unlock, just to be sure
 hc unlock
-
-hc set set tree_style '?| ++?-+'
-
-#Dualmonitor setup
-# Find out your monitor name with xrandr or arandr (save and you get this line)
-#xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
-#xrandr --output DP2 --primary --mode 1920x1080 --rate 60.00 --output LVDS1 --off &
-#xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
-#xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 
 #Dualmonitor setup

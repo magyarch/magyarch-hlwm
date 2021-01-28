@@ -88,19 +88,13 @@ super + F11
 super + F12
     mpv --geometry=40%+30+30 --title="mpvfloat"
 
-F1
-    tdrop -ma 50% -h 50% -y 25% -x 25% alacritty --class=scratchpad -title=scratchpad
-
-
-
-
 ############################################################
                     #Herbstluftwm control#
 ############################################################
 
 # Splitting frames
-alt + {u,o,e}
-    herbstclient split {bottom 0.5,right 0.5, explode}
+alt + {u,o,z,i,e}
+    herbstclient split {bottom 0.5,horiz 0.3,top 0.3,vertical 0.5,auto}
 
 # Moving clients
 super + shift + {Left,Down,Up,Right}
