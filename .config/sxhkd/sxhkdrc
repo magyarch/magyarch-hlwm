@@ -59,7 +59,7 @@ super + {_,shift + } KP_Home
 
 # Help doc
 super + F1
-    zathura ~/.local/bin/Magyarch-hlwm-help.pdf
+    zathura ~/.local/share/Magyarch-hlwm.pdf
 
 # Edit important config files
 super + F2
@@ -71,7 +71,7 @@ super + F3
 
 # Take a picture
 super + {F4,F5}
-    {maim pic-full-$(date '+%y%m%d-%H%M-%S').png,maimpick}
+    {maim ~/Képek/Képernyőképek/`date +%Y-%m-%d_%H:%M:%S`.png,maimpick}
 
 # Change background
 super + F8
