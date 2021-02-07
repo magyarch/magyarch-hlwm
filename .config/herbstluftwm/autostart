@@ -7,9 +7,13 @@ hc() {
 }
 
 
+hc set tree_style '╾│ ├╰╼─╮'
+
+
+hc set_layout grid
+
 
 hc emit_hook reload
-
 
 # KEYBINDINGS
 
@@ -74,7 +78,7 @@ Mod=Mod4   # Use the super key as the main modifier
 #hc keybind $Mod-Control-m remove
 
 # resizing frames
-resizestep=0.05
+resizestep=0.04
 hc keybind $Mod-Control-h       resize left +$resizestep
 hc keybind $Mod-Control-j       resize down +$resizestep
 hc keybind $Mod-Control-k       resize up +$resizestep
@@ -133,52 +137,36 @@ hc mousebind $Mod-Button3 resize
 #hc keybind $Mod-c cycle
 # hc keybind $Mod1-i jumpto urigent
 
-#reset prior to setting the theme
-#hc attr theme.reset 1
 
-# Attribute
-hc attr theme.tiling.reset 1
-hc attr theme.floating.reset 1
-hc attr theme.active.color '#2e8b57'
-#hc attr theme.active.inner_color '#141414'
-#hc attr theme.active.outer_color '#6790EB'
-#hc attr theme.background_color '#141414'
-#hc attr theme.border_width 1
-#hc attr theme.normal.border_width 0
-hc attr theme.active.border_width 2
-hc attr theme.floating.border_width 2
-hc attr theme.floating.outer_width 0
-#hc attr theme.floating.outer_color black
-#hc attr theme.inner_color black
-#hc attr theme.inner_width 0
-#hc attr theme.outer_witdh 0
-#hc attr theme.normal.color '#141414'
-#hc attr theme.urgent.color orange
+###########
+#  THEME  #
+###########
 
-# Set
+###########
+#  THEME  #
+###########
 
-hc set always_show_frame 0
-hc set focus_follows_mouse 1
-hc set frame_border_active_color '#2e8b57'
 hc set frame_border_normal_color '#2f2b26'
-#hc set frame_bg_normal_color '#2f2b26'
-#hc set frame_bg_active_color '#0A3639'
-
+hc set frame_border_active_color '#2e8b57'
+hc set frame_bg_normal_color '#2f2b26'
+hc set frame_bg_active_color '#2e8b57'
+hc set window_border_normal_color '#2f2b26'
+hc set window_border_active_color '#2e8b57'
 hc set frame_border_width 2
+hc set frame_border_inner_width 0
+hc set window_border_width 2
 hc set window_border_inner_width 0
+hc set always_show_frame 0
 hc set frame_bg_transparent 1
+hc set frame_normal_opacity 100
+hc set frame_active_opacity 100
 hc set frame_transparent_width 0
 hc set frame_gap 0
 hc set frame_padding 0
-hc set mouse_recenter_gap 0
 hc set smart_frame_surroundings 1
-hc set smart_window_surroundings 1
-herbstclient set tree_style '╾│ ├╰╼─╮'
-hc set_layout horizontal
-#herbstclient set_layout grid
+hc set smart_window_surroundings 0
 
-
-hc set window_gap 5
+hc set window_gap 10
 
 
 # RULES
@@ -222,7 +210,7 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 start it on each monitor
 "$panel" $monitor &
 #hc pad 0 "" "" 25
-hc pad 0 23
+hc pad 0 23 0 0  
 #hc pad 0 "" 5
 #hc pad 0 "" "" "" 5
 done

@@ -156,3 +156,6 @@ super + m
 
 super + shift + m 
     herbstclient spawn hide_windows -1   
+
+super + control + m 
+    herbstclient spawn hide_window 0   
