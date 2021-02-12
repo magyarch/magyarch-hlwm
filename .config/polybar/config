@@ -8,7 +8,7 @@ margin-bottom = 0
 ;https://github.com/jaagr/polybar/wiki/Configuration#application-settings
 throttle-output = 5
 throttle-output-for = 10
-throttle-input-for = 30
+#throttle-input-for = 30
 screenchange-reload = true
 compositing-background = over
 compositing-foreground = over
@@ -47,8 +47,8 @@ text = #99d1ce
 ################################################################################
 
 [bar/mainbar-hlwm]
-monitor = ${env:MONITOR}
-;monitor-fallback = HDMI1
+monitor = ${env:MONITOR:DisplayPort-0}
+monitor-fallback = HDMI1
 width = 100%
 height = 23
 offset-x = 0
@@ -64,7 +64,7 @@ foreground = ${colors.foreground}
 line-size = 1
 line-color = #f00
 
-wm-restack = hlwm
+;wm-restack = hlwm
 ;override-redirect = true
 
 ; Enable support for inter-process messaging
@@ -86,7 +86,7 @@ module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "JetBrains Mono:pixelsize=10;1"
-font-1 = "FontAwesome:pixelsize=10;1"
+font-1 = "FontAwesome:pixelsize=11;1"
 font-2 = "Joy Pixels:scale=10;1"
 
 modules-left = ewmh xwindow
@@ -554,7 +554,7 @@ content-foreground = ${colors.foreground}
 content-background = ${colors.background}
 content-padding = 1
 
-click-left = zathura $HOME/.local/bin/Magyarch-hlwm-help.pdf &
+click-left = zathura $HOME/.local/share/Magyarch-hlwm.pdf &
 
 
 
