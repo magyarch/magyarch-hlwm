@@ -90,8 +90,8 @@ font-1 = "FontAwesome:pixelsize=11;1"
 font-2 = "Joy Pixels:scale=10;1"
 
 modules-left = ewmh xwindow
-modules-center = cpu-graph
-modules-right = inteltemp sep mem sep weather2 sep date sep pavolume sep power sep help sep
+modules-center = app term files
+modules-right = inteltemp sep mem sep weather2 sep date sep pavolume sep power sep 
 
 #tray-position = none
 
@@ -478,7 +478,7 @@ format-padding = 1
 
 [module/firefox]
 type = custom/text
-content = 
+content = Web 
 content-foreground = ${colors.foreground}
 content-background = ${colors.background}
 content-padding = 2
@@ -488,21 +488,21 @@ click-left = firefox &
 
 [module/term]
 type = custom/text
-content = 
+content = Term  
 content-foreground = ${colors.foreground}
 content-background = ${colors.background}
-content-padding = 3
+content-padding = 1
 
-click-left  = urxvt &
+click-left  = urxvt -g 110x30+530+300 &
 
 
 [module/app]
 type = custom/text
-content = ""
+content = App 
 content-foreground = ${colors.foreground}
 content-background = ${colors.background}
-content-padding = 2
-click-left = rofi -modi run,drun -show drun -location 1 -xoffset 1450 -yoffset 23 -line-padding 4 -columns 1 -width 15 -lines 20 -padding 15 -hide-scrollbar -show-icons -drun-icon-theme
+content-padding = 1
+click-left = rofi -modi run,drun -show drun -location 1 -xoffset 760 -yoffset 23 -line-padding 4 -columns 1 -width 15 -lines 20 -padding 15 -hide-scrollbar -show-icons -drun-icon-theme
 click-right = jgmenu_run >/dev/null 2>&1 &
 
 
@@ -527,10 +527,10 @@ click-left  = lxappearance &
 
 [module/files]
 type = custom/text
-content = ""
+content = Files 
 content-foreground = ${colors.foreground}
 content-background = ${colors.background}
-content-padding = 2
+content-padding = 1
 
 click-left  = pcmanfm &
 
