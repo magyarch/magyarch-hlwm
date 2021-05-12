@@ -7,7 +7,7 @@
 
 declare options=("alias
 bash
-bspwm
+hlwm
 profile
 vifm
 polybar
@@ -15,7 +15,7 @@ sxhkd
 xprofile
 quit")
 
-choice=$(echo -e "${options[@]}" | rofi -dmenu -i -no-custom -p 'Edit a config file: ')
+choice=$(echo -e "${options[@]}" | rofi -dmenu -i -no-custom -p 'Konfigfájlok szerkesztése: ')
 
 case "$choice" in
 	quit)
@@ -28,7 +28,7 @@ case "$choice" in
 		choice="$HOME/.bashrc"
 	;;
 	bspwm)
-		choice="$HOME/.config/bspwm/bspwmrc"
+		choice="$HOME/.config/herbstluftwm/autostart"
 	;;
 	profile)
 		choice="$HOME/.profile"

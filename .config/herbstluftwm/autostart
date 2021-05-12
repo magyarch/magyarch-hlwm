@@ -78,7 +78,7 @@ Mod=Mod4   # Use the super key as the main modifier
 #hc keybind $Mod-Control-m remove
 
 # resizing frames
-resizestep=0.04
+resizestep=0.05
 hc keybind $Mod-Control-h       resize left +$resizestep
 hc keybind $Mod-Control-j       resize down +$resizestep
 hc keybind $Mod-Control-k       resize up +$resizestep
@@ -167,6 +167,7 @@ hc set smart_frame_surroundings 1
 hc set smart_window_surroundings 0
 
 hc set window_gap 10
+hc set focus_follows_mouse 1
 
 
 # RULES

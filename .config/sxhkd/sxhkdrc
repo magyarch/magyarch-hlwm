@@ -4,15 +4,15 @@
 
 # Main and float terminal
 super + {_,shift + } Return
-    {$TERMINAL, $TERMFLOAT -g 110x30+530+300}
+    {$TERMINAL, $TERMFLOAT -g 110x30+530+260}
 
 # Dmenu2 and rofi(window switcher, application launcher)
 super + {_,shift +} d
     {dmenu_run -i -p 'Search' -nb '#2f2b26' -sb '#2e8b57' -fn 'JetBrains Mono Medium-12' -w '760' -h '24' -x '574' -y '48',rofi_run -r}
 
 # Tui filemanager and same command with sudo
-super + r
-    $TERMINAL -e $FILE
+super + {_,shift + } r
+    {$TERMINAL -e $FILE, $TERMINAL -e sudo $FILE}
 
 # Show keys with rofi/default gui editor
 super + {_,shift + } e
@@ -28,7 +28,7 @@ super + {_,shift + } i
 
 # S,R,lock script,calendar app
 super + {_,shift + } c
-    {power, $TERMFLOAT -g 110x30+530+300 -e calcurse}
+    {rofi_run -l, $TERMFLOAT -g 110x30+530+300 -e calcurse}
 
 # Default web browser brave and firefox
 super + {_,shift + } w
@@ -38,18 +38,19 @@ super + {_,shift + } w
 super + {_,shift + } p
     {discord, pcmanfm}
 
-# Hide polybar/Reload bspwm
+# Hide polybar/Reload polybar
 super + {_,shift + } b
-    {polybar-msg cmd toggle, herbstclient reload}
+    {polybar-msg cmd toggle, $HOME/.config/polybar/launch.sh}
 
 # Reload sxhkd
-super + {_,shift + } Escape
-    {pkill -USR1 -x sxhkd, $HOME/.config/polybar/launch.sh}
+super + Escape
+    pkill -USR1 -x sxhkd
 
+# Volume control
 alt + {Up,Down}
     {amixer set Master 10%+, amixer set Master 10%-}
 
-
+# Screencast and Stream to twitch 
 super + {_,shift + } KP_Home
     {dmenurecord, live.sh}
 
@@ -81,6 +82,7 @@ super + F8
 super + {F9,F10}
     {dmenumount,dmenuumount}
 
+# Search internet
 super + F11
     ducksearch
 
@@ -127,7 +129,7 @@ super + q
     herbstclient close
 
 # Reload Herbstluftwm
-super + shift + r
+super + shift + Escape
     herbstclient reload
 
 # Cycle layout
