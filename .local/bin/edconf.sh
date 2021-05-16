@@ -27,7 +27,7 @@ case "$choice" in
 	bash)
 		choice="$HOME/.bashrc"
 	;;
-	bspwm)
+	hlwm)
 		choice="$HOME/.config/herbstluftwm/autostart"
 	;;
 	profile)
