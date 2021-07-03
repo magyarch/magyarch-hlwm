@@ -20,6 +20,8 @@ alias ka="killall" \
 	lsp="pacman -Qett --color=always | less" \
 	ffmpeg="ffmpeg -hide_banner"
 
+alias v="~/.config/vifm/vifmrun ."
+
 #list
 alias ls='ls --color=auto'
 alias la='ls -a'
@@ -193,7 +195,7 @@ ex ()
 
 #[[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-neofetch
+#neofetch
 
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim for vim if present.
 
