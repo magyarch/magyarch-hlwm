@@ -1,18 +1,15 @@
-#!/bin/sh
+#!/usr/bin/env bash
+export FIFO_UEBERZUG="/tmp/vifm-ueberzug-${PPID}"
 
-test -z "$(which ueberzug )" &&
-	exec vifm "$@" && exit
-
-test -z "$DISPLAY" &&
-	exec vifm "$@" && exit
-
-cleanup() {
-    rm "$FIFO_UEBERZUG"
-    pkill -P $$ >/dev/null
+function cleanup {
+    rm "$FIFO_UEBERZUG" 2>/dev/null
+    pkill -P $$ 2>/dev/null
 }
-! test -d "$HOME/.cache/vifm" && mkdir -p "$HOME/.cache/vifm"
-export FIFO_UEBERZUG="$HOME/.cache/vifm/ueberzug-${PPID}"
+
+rm "$FIFO_UEBERZUG" 2>/dev/null
 mkfifo "$FIFO_UEBERZUG"
-tail --follow "$FIFO_UEBERZUG" | ueberzug layer --silent --parser bash >/dev/null 2>&1 &
 trap cleanup EXIT
-vifm "$@"
+tail --follow "$FIFO_UEBERZUG" | ueberzug layer --silent --parser bash &
+
+vifm
+cleanup
