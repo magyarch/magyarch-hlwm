@@ -2,7 +2,7 @@
 
 setbg &		# Set the background
 sxhkd &	# Bind keys
-# Switch to US,HR or HU keyboard layout 
+# Switch to US,HR or HU keyboard layout
 setxkbmap -option grp:alt_shift_toggle -layout hu,us,hr -variant &
 xset r rate 330 50 &	# Speed xrate up
 #xsetroot -solid '#000000'
@@ -13,7 +13,7 @@ dunst &			# dunst for notifications
 mpdupdate &
 nm-applet &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-picom --experimental-backends --inactive-opacity 1.00 --opacity-rule "80:class_g = 'URxvt'" --blur-background-exclude "class_g = 'slop'" -cCGfF -o 0.70 -O 0.028 -I 0.028 -t 0 -l 0 -r 7 -D2 -m 1.00 &
+picom --config ~/.config/picom.conf &
 #zathura ~/.local/share/Magyarch-hlwm.pdf &
 sleep 2s && notify-send 'Nyomja meg a Super+F1-et a használati utasításért.' -t 10000 &
 
