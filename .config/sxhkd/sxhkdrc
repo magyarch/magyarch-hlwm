@@ -4,11 +4,11 @@
 
 # Main and float terminal
 super + {_,shift + } Return
-    {$TERMINAL, $TERMFLOAT -g 110x30+530+260}
+    {$TERMINAL, scratch scratchpad}
 
 # Dmenu2 and rofi(window switcher, application launcher)
 super + {_,shift +} d
-    {dmenu_run -i -p 'Search' -nb '#1a1a1a' -sb '#2e8b57' -fn 'JetBrains Mono Medium-12' -w '760' -h '24' -x '574' -y '48',rofi_run -r}
+    {dmenu_run -i -c -g 1 -l 10 -p 'Search' -nb '#1a1a1a' -sb '#947cc3' -fn 'JetBrains Mono Medium-12',rofi_run -r}
 
 # Tui filemanager and same command with sudo
 super + {_,shift + } r
@@ -20,7 +20,7 @@ super + {_,shift + } e
 
 # News, tui music player
 super + {_,shift + } n
-    {$TERMINAL -e newsboat, $TERMFLOAT -g 110x30+530+300 -e ncmpcpp}
+    {scratch News, scratch Music}
 
 # Htop,gtop system monitor
 super + {_,shift + } i
@@ -28,11 +28,11 @@ super + {_,shift + } i
 
 # S,R,lock script,calendar app
 super + {_,shift + } c
-    {rofi_run -l, $TERMFLOAT -g 110x30+530+300 -e calcurse}
+    {rofi_run -l, eww open powermenu}
 
 # Default web browser brave and firefox
 super + {_,shift + } w
-    {$BROWSER, firefox}
+    {$BROWSER, $BROWSER2}
 
 # Chat client, gui filemanager
 super + {_,shift + } p
@@ -48,7 +48,7 @@ super + Escape
 
 # Volume control
 alt + {Up,Down}
-    {amixer set Master 10%+, amixer set Master 10%-}
+    {pamixer --allow-boost -i 5, pamixer --allow-boost -d 5}
 
 # Screencast and Stream to twitch 
 super + {_,shift + } KP_Home
@@ -68,7 +68,7 @@ super + F2
 
 # Select Display
 super + F3                    
-    displayselect
+    scratch FM
 
 # Take a picture
 super + {F4,F5}

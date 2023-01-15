@@ -10,7 +10,7 @@ hc() {
 hc set tree_style '╾│ ├╰╼─╮'
 
 
-hc set_layout grid
+hc set_layout horizontal
 
 
 hc emit_hook reload
@@ -146,15 +146,15 @@ hc mousebind $Mod-Button3 resize
 #  THEME  #
 ###########
 
-hc set frame_border_normal_color '#2f2b26'
-hc set frame_border_active_color '#2e8b57'
-hc set frame_bg_normal_color '#2f2b26'
-hc set frame_bg_active_color '#2e8b57'
-hc set window_border_normal_color '#2f2b26'
-hc set window_border_active_color '#2e8b57'
+hc set frame_border_normal_color '#000000'
+hc set frame_border_active_color '#947cc3'
+hc set frame_bg_normal_color '#000000'
+hc set frame_bg_active_color '#947cc3'
+hc set window_border_normal_color '#000000'
+hc set window_border_active_color '#947cc3'
 hc set frame_border_width 3
 hc set frame_border_inner_width 0
-hc set window_border_width 3
+hc set window_border_width 5
 hc set window_border_inner_width 0
 hc set always_show_frame 0
 hc set frame_bg_transparent 1
@@ -168,7 +168,7 @@ hc set frame_padding 0
 hc set smart_frame_surroundings 1
 hc set smart_window_surroundings 0
 
-hc set window_gap 10
+hc set window_gap 20
 hc set focus_follows_mouse 1
 
 
@@ -188,7 +188,18 @@ hc rule class~'(VirtualBox Manager|Vmplayer)' tag='' switchtag=on focus=on
 hc rule class~'(Thunar|Pcmanfm|Nemo)' tag='' switchtag=on focus=on
 hc rule class~'(Shotcut|Gpick|gpick|Steam)' tag='' floating=on
 hc rule class~'(gimp|Gimp)' tag='' switchtag=on focus=on
-hc rule class~'(Zathura|zathura|Lxappearance|Pavucontrol|)' floating=on floatplacement=center
+hc rule class~'(Zathura|zathura|Lxappearance|Pavucontrol|)' floating=on floatplacement=center floating_geometry=1800x1000
+
+
+# SCRATCHPADS #
+#-------------#
+hc rule title~'scratchpad' floating=on floatplacement=center floating_geometry=1800x1000
+hc rule title~'FM' floating=on floatplacement=center floating_geometry=1800x1000
+hc rule class~'News' floating=on floatplacement=center floating_geometry=1800x1000
+#hc rule title~'Mail' floating=on floatplacement=center floating_geometry=1500x800
+hc rule title~'Music' floating=on floatplacement=center floating_geometry=1800x1000
+hc rule title~'Todo' floating=on floatplacement=center floating_geometry=1000x650
+
 
 
 # give focus to most common terminals
@@ -216,7 +227,7 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 start it on each monitor
 "$panel" $monitor &
 #hc pad 0 "" "" 25
-hc pad 0 23 0 0  
+hc pad 0 36 0 0  
 #hc pad 0 "" 5
 #hc pad 0 "" "" "" 5
 done

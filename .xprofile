@@ -1,14 +1,15 @@
 #!/bin/sh
 
+xrandr --dpi 192
+export GDK_SCALE=2
 setbg &		# Set the background
 sxhkd &	# Bind keys
 # Switch to US,HR or HU keyboard layout
-setxkbmap -option grp:alt_shift_toggle -layout hu,us,hr -variant &
+#setxkbmap -option grp:alt_shift_toggle -layout hu,us,hr -variant &
 xset r rate 330 50 &	# Speed xrate up
 #xsetroot -solid '#000000'
 xsetroot -cursor_name left_ptr &
 unclutter &		# Remove mouse when idle
-#xcompmgr &		# xcompmgr for transparency
 dunst &			# dunst for notifications
 mpdupdate &
 nm-applet &
