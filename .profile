@@ -6,7 +6,7 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"
-#export BROWSER="braverun"
+export BROWSER2="microsoft-edge-stable"
 export READER="zathura"
 export FILE="vifmrun"
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
@@ -31,7 +31,10 @@ mpd >/dev/null 2>&1 &
 
 [ ! -f ~/.config/shortcutrc ] && shortcuts >/dev/null 2>&1
 
-echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
+# Load aliases
+#[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+echo "$0" | grep "zsh$" >/dev/null && [ -f ~/.zshrc ] && source "$HOME/.zshrc"
 
 
 # Screenshot export.

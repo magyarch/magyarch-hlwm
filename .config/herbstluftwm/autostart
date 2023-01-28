@@ -10,7 +10,7 @@ hc() {
 hc set tree_style '╾│ ├╰╼─╮'
 
 
-hc set_layout horizontal
+hc set_layout grid
 
 
 hc emit_hook reload
@@ -146,17 +146,18 @@ hc mousebind $Mod-Button3 resize
 #  THEME  #
 ###########
 
-hc set frame_border_normal_color '#000000'
+# WIndow and tabs color/border
+hc set frame_border_normal_color '#282a36'
 hc set frame_border_active_color '#947cc3'
-hc set frame_bg_normal_color '#000000'
+hc set frame_bg_normal_color '#282a36'
 hc set frame_bg_active_color '#947cc3'
-hc set window_border_normal_color '#000000'
+hc set window_border_normal_color '#282a36'
 hc set window_border_active_color '#947cc3'
 hc set frame_border_width 3
 hc set frame_border_inner_width 0
-hc set window_border_width 5
+hc set window_border_width 8
 hc set window_border_inner_width 0
-hc set always_show_frame 0
+hc set always_show_frame on
 hc set frame_bg_transparent 1
 hc set frame_normal_opacity 100
 hc set frame_active_opacity 100
@@ -165,8 +166,15 @@ hc set frame_gap 0
 hc set frame_padding 0
 
 
-hc set smart_frame_surroundings 1
-hc set smart_window_surroundings 0
+hc set smart_frame_surroundings on
+hc set smart_window_surroundings false
+
+# TABS
+herbstclient set_attr theme.title_when multuple_tabs
+hc attr theme.tab_color "#282a36"
+hc attr theme.tab_title_color "#$947cc3"
+herbstclient set tabbed_max true
+
 
 hc set window_gap 20
 hc set focus_follows_mouse 1

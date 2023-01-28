@@ -8,7 +8,7 @@ super + {_,shift + } Return
 
 # Dmenu2 and rofi(window switcher, application launcher)
 super + {_,shift +} d
-    {dmenu_run -i -c -g 1 -l 10 -p 'Search' -nb '#1a1a1a' -sb '#947cc3' -fn 'JetBrains Mono Medium-12',rofi_run -r}
+    {dmenu_run -i -c -g 1 -l 15 -p 'Search' -nb '#282a36' -sb '#bd93f9' -fn 'JetBrains Mono Nerd-13',rofi_run -r}
 
 # Tui filemanager and same command with sudo
 super + {_,shift + } r
@@ -163,24 +163,24 @@ super + control + m
     herbstclient spawn hide_window 0   
 
 
-# bind menu
-alt + m
-  sh ~/.config/herbstluftwm/hlwm-utils/hlwm-menu/hlwm-menu.sh
+# # bind menu
+# alt + m
+#   sh ~/.config/herbstluftwm/hlwm-utils/hlwm-menu/hlwm-menu.sh
 
 
-# layout bindings
-alt + control + c
-  sh ~/.config/herbstluftwm/hlwm-utils/layouts/centered-master
+# # layout bindings
+# alt + control + c
+#   sh ~/.config/herbstluftwm/hlwm-utils/layouts/centered-master
 
-alt + control + d
-  sh ~/.config/herbstluftwm/hlwm-utils/layouts/dwindle
+# alt + control + d
+#   sh ~/.config/herbstluftwm/hlwm-utils/layouts/dwindle
 
-alt + control + m 
-  sh ~/.config/herbstluftwm/hlwm-utils/layouts/master-stack
+# alt + control + m 
+#   sh ~/.config/herbstluftwm/hlwm-utils/layouts/master-stack
   
-alt + control + v
-  sh ~/.config/herbstluftwm/hlwm-utils/layouts/vertical
+# alt + control + v
+#   sh ~/.config/herbstluftwm/hlwm-utils/layouts/vertical
   
-# Reset to default 
-alt + control + r 
-  sh ~/.config/herbstluftwm/hlwm-utils/layouts/reset    
+# # Reset to default 
+# alt + control + r 
+#   sh ~/.config/herbstluftwm/hlwm-utils/layouts/reset    

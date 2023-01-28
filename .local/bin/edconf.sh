@@ -6,7 +6,7 @@
 
 
 declare options=("alias
-bash
+zsh
 hlwm
 profile
 vifm
@@ -15,7 +15,7 @@ sxhkd
 xprofile
 quit")
 
-choice=$(echo -e "${options[@]}" | rofi -dmenu -i -no-custom -p 'Konfigfájlok szerkesztése: ')
+choice=$(echo -e "${options[@]}" | dmenu -i -c -g 1 -l 20 -nb '#282a36' -sb '#bd93f9' -fn 'JetBrains Mono Nerd-13' -p 'Konfigfájlok: ')
 
 case "$choice" in
 	quit)
@@ -24,8 +24,8 @@ case "$choice" in
 	alias)
 		choice="$HOME/.config/aliasrc"
 	;;
-	bash)
-		choice="$HOME/.bashrc"
+	zsh)
+		choice="$HOME/.config/zsh/.zshrc"
 	;;
 	hlwm)
 		choice="$HOME/.config/herbstluftwm/autostart"
