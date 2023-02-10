@@ -10,8 +10,8 @@ hc() {
 hc set tree_style '╾│ ├╰╼─╮'
 
 
-hc set_layout grid
-
+hc set_layout horizontal
+#hc set tabbed_max true
 
 hc emit_hook reload
 
@@ -77,6 +77,9 @@ Mod=Mod4   # Use the super key as the main modifier
 # remove frame
 #hc keybind $Mod-Control-m remove
 
+hc keybind $Mod-t cycle_layout +1 horizontal vertical #change direction of clients
+hc keybind $Mod-g chain , set smart_window_surroundings off , set_layout grid #change direction of clients
+hc keybind $Mod-Shift-g chain , set smart_window_surroundings on , set_layout max
 # resizing frames
 resizestep=0.05
 hc keybind $Mod-Control-h       resize left +$resizestep
@@ -147,37 +150,124 @@ hc mousebind $Mod-Button3 resize
 ###########
 
 # WIndow and tabs color/border
-hc set frame_border_normal_color '#282a36'
-hc set frame_border_active_color '#947cc3'
-hc set frame_bg_normal_color '#282a36'
-hc set frame_bg_active_color '#947cc3'
-hc set window_border_normal_color '#282a36'
-hc set window_border_active_color '#947cc3'
-hc set frame_border_width 3
-hc set frame_border_inner_width 0
-hc set window_border_width 8
-hc set window_border_inner_width 0
-hc set always_show_frame on
-hc set frame_bg_transparent 1
-hc set frame_normal_opacity 100
-hc set frame_active_opacity 100
-hc set frame_transparent_width 0
-hc set frame_gap 0
-hc set frame_padding 0
+# hc set frame_border_normal_color '#282a36'
+# hc set frame_border_active_color '#947cc3'
+# hc set frame_bg_normal_color '#282a36'
+# hc set frame_bg_active_color '#947cc3'
+# hc set window_border_normal_color '#282a36'
+# hc set window_border_active_color '#947cc3'
+# hc set frame_border_width 3
+# hc set frame_border_inner_width 0
+# hc set window_border_width 8
+# hc set window_border_inner_width 0
+# #hc set always_show_frame on
+
+# hc set frame_gap 0
+# hc set frame_padding 0
 
 
-hc set smart_frame_surroundings on
-hc set smart_window_surroundings false
+# hc set smart_frame_surroundings 'hide_all'
+# hc set smart_window_surroundings on
+# hc attr theme.title_height 15
+# hc attr theme.title_when one_tab
 
-# TABS
-herbstclient set_attr theme.title_when multuple_tabs
-hc attr theme.tab_color "#282a36"
-hc attr theme.tab_title_color "#$947cc3"
-herbstclient set tabbed_max true
+# # TABS
+#  herbstclient set_attr theme.title_when multiple_tabs
 
 
+# #hc set tabbed_max true
+
+# # hc set window_gap 0
+# # hc set focus_follows_mouse 1
+
+
+# herbstclient set_attr theme.title_when multiple_tabs
+## Theme Resets
+hc attr theme.reset 1
+hc attr theme.active.reset 1
+hc attr theme.normal.reset 1
+hc attr theme.urgent.reset 1
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+
+## General Settings
+hc attr theme.tiling.outer_width 1
 hc set window_gap 20
-hc set focus_follows_mouse 1
+hc set frame_padding 0
+#hc set smart_window_surroundings on
+hc set smart_frame_surroundings 'hide_all'
+hc set mouse_recenter_gap 1
+hc set hide_covered_windows on
+
+## Frame settings
+# hc set frame_border_width 0
+# hc set frame_border_inner_width 2
+# hc set frame_border_active_color "${color10:-#000000}"
+# hc set frame_border_normal_color "${color4:-#282a36}"
+# hc set frame_border_inner_color "${color3:-#282a36}"
+# hc set frame_bg_normal_color "${color0:-#282a36}"
+# hc set frame_bg_active_color "${color1:-#947cc3}"
+# hc set show_frame_decorations 'focused_if_multiple'
+# hc set frame_gap 0
+ hc set frame_bg_transparent 1
+#  hc set frame_normal_opacity 100
+#  hc set frame_active_opacity 100
+#  hc set frame_transparent_width 0
+
+## Background settings
+hc attr theme.color "${color0:-#282a36}"
+hc attr theme.background_color "${color0:-#282a36}"
+hc attr theme.border_width 8
+
+## Inner border normal settings
+hc attr theme.inner_color "${color2:-#262138}"
+hc attr theme.inner_width 1
+
+## Outer border normal settings
+hc attr theme.outer_color "${color1:-#262138}"
+hc attr theme.outer_width 1
+
+## Title settings
+# hc attr theme.normal.tab_color "${color3:-#282a36}"
+# hc attr theme.title_align 'center'
+# hc attr theme.title_color "${color4:-#c3cdc8}"
+# hc attr theme.title_depth 3  # space below the title's baseline
+# hc attr theme.title_font 'JetBrains Mono Nerd Font:pixelsize=28'  # example using Xft
+# # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
+# hc attr theme.title_height 25
+# hc attr theme.title_when always
+
+## Settings for non-focused clients
+hc attr theme.normal.color "${color3:-#282a36}"
+hc attr theme.normal.tab_color "${color3:-#1F1F1Fdd}"
+hc attr theme.normal.title_color "${color4:-#898989}"
+
+## Settings for focused clients
+hc attr theme.active.background_color "${color0:-#282a36}"
+hc attr theme.active.color "${color10:-#947cc3}"
+hc attr theme.active.tab_color "${color3:-#947cc3}"
+hc attr theme.active.inner_color "${color9:-#03a8f4}"
+
+## Settings for urgent clients
+hc attr theme.urgent.color "${color11:-#e91e63}"
+hc attr theme.urgent.tab_color "${color11:-#e91e63}"
+hc attr theme.urgent.inner_color "${color11:-#9A65B0}"
+
+## Settings for floating
+hc attr theme.floating.border_width 4
+hc attr theme.floating.outer_width 1
+hc attr theme.floating.outer_color "${color15:-#282a36}"
+hc attr theme.floating.title_when always
+
+# ## Settings for minimal
+hc attr theme.minimal.title_height 25
+hc attr theme.minimal.title_color "${color4:-#c3cdc8}"
+hc attr theme.minimal.title_depth 3  # space below the title's baseline
+hc attr theme.minimal.title_align 'center'
+hc attr theme.minimal.title_font 'JetBrains Mono Nerd Font:pixelsize=28'  # example using Xft
+hc attr theme.minimal.tab_color "${color3:-#1F1F1Fdd}"
+hc attr theme.minimal.color "${color10:-#947cc3}"
+
 
 
 # RULES
