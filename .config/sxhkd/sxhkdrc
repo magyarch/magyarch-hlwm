@@ -95,8 +95,8 @@ super + F12
 ############################################################
 
 # Splitting frames
-alt + {u,o,z,i,e}
-    herbstclient split {bottom 0.5,horiz 0.3,top 0.3,vertical 0.5,auto}
+alt + e
+    herbstclient chain . split auto . rule once index=e focus=on
 
 # Moving clients
 super + shift + {Left,Down,Up,Right}

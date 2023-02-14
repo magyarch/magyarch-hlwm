@@ -27,11 +27,13 @@
 				  :year calendar_year))))
 
 (defwindow calendar
-	:geometry (geometry :x "30px"
-			    :y "75px"
+	:geometry (geometry :x "-210px"
+			    :y "35px"
 			    :width "275px"
-			    :height "190px")
+			    :height "190px"
+			    :anchor "top right")
 	:stacking "fg"
+	:wm-ignore true
 (cal))
 
 (defwidget powermenucontent []
