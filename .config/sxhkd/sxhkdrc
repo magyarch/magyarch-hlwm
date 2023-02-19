@@ -15,8 +15,8 @@ super + {_,shift + } r
     {$TERMINAL -e $FILE, $TERMINAL -e sudo $FILE}
 
 # Show keys with rofi/default gui editor
-super + {_,shift + } e
-    {show_keys.sh, subl}
+super + shift + e
+    code
 
 # News, tui music player
 super + {_,shift + } n
@@ -24,7 +24,7 @@ super + {_,shift + } n
 
 # Htop,gtop system monitor
 super + {_,shift + } i
-    {$TERMINAL -e htop, $TERMINAL -e gtop}
+    {$TERMINAL -e htop, dropterm}
 
 # S,R,lock script,calendar app
 super + {_,shift + } c
@@ -32,7 +32,7 @@ super + {_,shift + } c
 
 # Default web browser brave and firefox
 super + {_,shift + } w
-    {$BROWSER, $BROWSER2}
+    {$BROWSER, microsoft-edge-stable --inprivate}
 
 # Chat client, gui filemanager
 super + {_,shift + } p
@@ -41,10 +41,6 @@ super + {_,shift + } p
 # Hide polybar/Reload polybar
 super + {_,shift + } b
     {polybar-msg cmd toggle, $HOME/.config/polybar/launch.sh}
-
-# Reload sxhkd
-super + Escape
-    pkill -USR1 -x sxhkd
 
 # Volume control
 alt + {Up,Down}
@@ -88,69 +84,12 @@ super + F11
 
 # Mpv floating
 super + F12
-    mpv --geometry=40%+30+30 --title="mpvfloat"
-
-############################################################
-                    #Herbstluftwm control#
-############################################################
-
-# Splitting frames
-alt + e
-    herbstclient chain . split auto . rule once index=e focus=on
-
-# Moving clients
-super + shift + {Left,Down,Up,Right}
-      herbstclient shift {left,down,up,right}
-
-super + shift + {h,j,k,l}
-      herbstclient shift {left,down,up,right}
-
-# Resizing frames
-super + control + {Left,Down,Up,Right}
-    herbstclient resize {left +0.01,down +0.01,up +0.01,right +0.01}
-
-# Pseudotile
-super + {_,shift + } s
-    herbstclient {pseudotile toggle, cycle_monitor}
-
-# Focusing windows
-super + {_,shift + } Tab
-    herbstclient {cycle_all +1,cycle_all -1}
-
-# Focus with arrow keys
-super + {Left,Down,Up,Right}
-    herbstclient {focus left,focus down,focus up,focus right}
-
-super + {h,j,k,l}
-    herbstclient {focus left,focus down,focus up,focus right}
-
-# Close window
-super + q
-    herbstclient close
-
-# Reload Herbstluftwm
-super + shift + Escape
-    herbstclient reload
-
-# Cycle layout
-super + {_,shift + } f
-    herbstclient {fullscreen toggle, floating toggle}
-
-
-super + control + m
-    herbstclient remove    
+    mpv --geometry=40%+30+30 --title="mpvfloat" 
 
 
 ###################################################################################
                       # Some extra function #
 ##################################################################################                      
-
-# Increase decrease gaps
-super + a 
-     herbstclient set window_gap $(( $(herbstclient attr settings.window_gap) + 2 ))   
-
-super + shift + a 
-     herbstclient set window_gap $(( $(herbstclient attr settings.window_gap) - 2 ))    
 
 # Hide unhide windows
 super + m
@@ -159,7 +98,7 @@ super + m
 super + shift + m 
     herbstclient spawn hide_windows -1   
 
-super + control + m 
+super + control + r
     herbstclient spawn hide_window 0   
 
 
