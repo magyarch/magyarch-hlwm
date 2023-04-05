@@ -30,7 +30,7 @@ hc keybind $Mod-q close
 
 #Most of the keybindings have been set in sxhkd config file
 #you can set them also here
- 
+
 hc keybind $Mod-Escape  pkill -USR1 -x sxhkd # reload sxhkd
 hc keybind $Mod-Shift-Escape reload # reload herbstluftwm
 
@@ -72,10 +72,10 @@ hc keybind $Mod-Shift-l     shift right
 hc keybind $Mod-t chain , split top 0.6 , focus up
 hc keybind $Mod-u chain , split bottom 0.5 , focus down
 hc keybind $Mod-o chain , split right 0.7 , focus right
-hc keybind $Mod-e chain , split auto , rule once index=e focus=on   
+hc keybind $Mod-e chain , split auto , rule once index=e focus=on
 # layouts
 hc keybind $Mod-Shift-t cycle_layout +1 horizontal vertical #change direction of clients
-hc keybind $Mod-g chain , set smart_window_surroundings off , set_layout grid 
+hc keybind $Mod-g chain , set smart_window_surroundings off , set_layout grid
 hc keybind $Mod-Shift-g chain , set smart_window_surroundings on , set_layout max
 hc keybind $Mod-Control-d spawn dropterm
 
@@ -242,14 +242,14 @@ hc rule floatplacement=center
 #hc rule focus=off # normally do not focus new clients
 
 #assign applications to workspaces or tags
-hc rule class~'(brave|Brave-browser|Chromium|Google-chrome)' tag='' switchtag=on focus=on
+hc rule class~'(brave|Brave-browser|Chromium|Microsoft-edge)' tag='' switchtag=on focus=on
 hc rule class='Spotify' tag='' switchtag=on focus=on
 hc rule class='subl' tag=''  switchtag=on focus=on
 hc rule class~'(discord|Discord)' tag='' switchtag=on focus=on
 #hc rule class~'(vlc|mpv|Mpv)' tag='' switchtag=on focus=on
 hc rule class~'(VirtualBox Manager|Vmplayer)' tag='' switchtag=on focus=on
 hc rule class~'(Thunar|Pcmanfm|Nemo)' tag='' switchtag=on focus=on
-hc rule class~'(Shotcut|Gpick|gpick|Steam)' tag='' floating=on
+hc rule class~'(Shotcut|Gpick|gpick|Steam)' tag='' switchtag=on focus=on
 hc rule class~'(gimp|Gimp)' tag='' switchtag=on focus=on
 hc rule class~'(Zathura|zathura|Lxappearance|Pavucontrol|)' floating=on floatplacement=center floating_geometry=1800x1000
 
@@ -267,7 +267,7 @@ hc rule title~'Todo' floating=on floatplacement=center floating_geometry=1000x65
 
 # give focus to most common terminals
 hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' floating=on focus=on
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on 
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 #hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 
@@ -290,7 +290,7 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 start it on each monitor
 "$panel" $monitor &
 #hc pad 0 "" "" 25
-hc pad 0 36 0 0  
+hc pad 0 36 0 0
 #hc pad 0 "" 5
 #hc pad 0 "" "" "" 5
 done

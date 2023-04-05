@@ -8,7 +8,7 @@ super + {_,shift + } Return
 
 # Dmenu2 and rofi(window switcher, application launcher)
 super + {_,shift +} d
-    {dmenu_run -i -c -g 1 -l 15 -p 'Search' -nb '#282a36' -sb '#bd93f9' -fn 'JetBrains Mono Nerd-13',rofi_run -r}
+    {dmenu_run, rofi_run -r}
 
 # Tui filemanager and same command with sudo
 super + {_,shift + } r
@@ -46,7 +46,7 @@ super + {_,shift + } b
 alt + {Up,Down}
     {pamixer --allow-boost -i 5, pamixer --allow-boost -d 5}
 
-# Screencast and Stream to twitch 
+# Screencast and Stream to twitch
 super + {_,shift + } KP_Home
     {dmenurecord, live.sh}
 
@@ -63,7 +63,7 @@ super + F2
     edconf.sh
 
 # Select Display
-super + F3                    
+super + F3
     scratch FM
 
 # Take a picture
@@ -72,7 +72,7 @@ super + {F4,F5}
 
 # Change background
 super + F8
-    wal    
+    wal
 
 # Mount and umount a USB drive or Android device
 super + {F9,F10}
@@ -84,22 +84,22 @@ super + F11
 
 # Mpv floating
 super + F12
-    mpv --geometry=40%+30+30 --title="mpvfloat" 
+    mpv --geometry=40%+30+30 --title="mpvfloat"
 
 
 ###################################################################################
                       # Some extra function #
-##################################################################################                      
+##################################################################################
 
 # Hide unhide windows
 super + m
     herbstclient spawn hide_windows +1
 
-super + shift + m 
-    herbstclient spawn hide_windows -1   
+super + shift + m
+    herbstclient spawn hide_windows -1
 
 super + control + r
-    herbstclient spawn hide_window 0   
+    herbstclient spawn hide_window 0
 
 
 # # bind menu
@@ -114,12 +114,12 @@ super + control + r
 # alt + control + d
 #   sh ~/.config/herbstluftwm/hlwm-utils/layouts/dwindle
 
-# alt + control + m 
+# alt + control + m
 #   sh ~/.config/herbstluftwm/hlwm-utils/layouts/master-stack
-  
+
 # alt + control + v
 #   sh ~/.config/herbstluftwm/hlwm-utils/layouts/vertical
-  
-# # Reset to default 
-# alt + control + r 
-#   sh ~/.config/herbstluftwm/hlwm-utils/layouts/reset    
+
+# # Reset to default
+# alt + control + r
+#   sh ~/.config/herbstluftwm/hlwm-utils/layouts/reset
