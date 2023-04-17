@@ -44,8 +44,8 @@ super + {_,shift + } b
 
 # Volume control
 alt + {Up,Down}
-    {pamixer --allow-boost -i 5, pamixer --allow-boost -d 5}
-
+     {pactl set-sink-volume @DEFAULT_SINK@ +5%, pactl set-sink-volume @DEFAULT_SINK@ -5%}
+    #{$HOME/.local/bin/statusbar/volume_brightness.sh volume_up, volume_brightness.sh volume_down}
 # Screencast and Stream to twitch
 super + {_,shift + } KP_Home
     {dmenurecord, live.sh}
