@@ -9,11 +9,10 @@
 * {
   black:      #000000;
   red:        #eb6e67;
-  green:      #2e8b56;
+  green:      #6272a4;
   yellow:     #f8c456;
   blue:       #6eaafb;
   mangenta:   #d886f3;
-  purple:     #947cc3;
   cyan:       #6cdcf7;
   emphasis:   #50536b;
   text:       #dfdfdf;
@@ -80,7 +79,7 @@ element urgent, element selected urgent {
 }
 
 element active, element selected active {
-  text-color: @purple;
+  text-color: @green;
 }
 
 message {
