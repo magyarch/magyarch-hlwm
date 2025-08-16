@@ -18,21 +18,15 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'vifm/vifm.vim'
 Plug 'kovetskiy/sxhkd-vim'
-" Syntax Highlighting
-Plug 'https://github.com/vim-python/python-syntax'
-Plug 'https://github.com/kovetskiy/sxhkd-vim'
-Plug 'https://github.com/PotatoesMaster/i3-vim-syntax'
-Plug 'https://github.com/rust-lang/rust.vim'
-Plug 'https://github.com/yuezk/vim-js'
-Plug 'https://github.com/maxmellon/vim-jsx-pretty'
 call plug#end()
 
-set bg=light
-set go=a
+" Első indításkor automatikusan telepíti a plugineket
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | source $MYVIMRC | endif
+
+set bg=dark
 set mouse=a
 set nohlsearch
 set clipboard=unnamedplus
-
 
 " Some basics:
 	nnoremap c "_c
